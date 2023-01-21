@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+</head>
+<body>
+    <header>
+        <img src="{% static 'images/icon.png' %}" class="logo">
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li> 
+                <li><a href="{% url 'students' %}">Students</a></li>
+                <li><a href="{% url 'add-student' %}">Add Student</a></li>
+                <li><a href="{% url 'sign-in' %}">Sign In</a></li>
+                <li><a href="{% url 'sign-up' %}">Sign Up</a></li>
+                <li><a href="{% url 'exams' %}">exams</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            {% block content %}
+            
+            {% endblock %}
+        </div>
+    </main>
+    <footer>
+        copyrights &copy; samahatechs.com, 2023. All rights reserved.
+    </footer>
+</body>
+</html> 
+<script src="{% static 'js/main.js' %}"></script>

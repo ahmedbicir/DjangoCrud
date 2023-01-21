@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Edit Student</h1>
+    <div>
+        {% for message in messages %}
+        <p class="alert">{{ message }}</p>
+        {% endfor %}
+    </div>
+    <form method="post" action="" class="form"> 
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Full names</label><br>
+            {{ form.name }}  
+        </div>
+        <div class="form-group">
+            <label>National Id</label><br>
+            {{ form.nationalId }} 
+        </div>
+        <div class="form-group">
+            <label>Registration Number</label><br>
+            {{ form.regno }} 
+        </div>
+        <div class="form-group">
+            <label>Course</label><br>
+            {{ form.course }} 
+        </div>
+        <div class="form-group">
+            <label>Gender</label><br>
+            {{ form.gender }} 
+        </div>
+        <div class="form-group">
+            <label>Mode of Study</label><br>
+            {{ form.mode }} 
+        </div>
+        <div class="form-group">
+            <label>Languages</label><br>
+                    
+                    {{ form.languages }}
+                    <script>
+                        
+                        //let my_data ='{{languages|safe}}'; 
+                        let my_data2 = ['PHP', 'JAVASCRIPT','YOOW'];
+                       // console.log(my_data[0]);
+                       // console.log(my_data);
+                        console.log(my_data2);
+                        let lan = document.getElementsByName('languages');
+                        for (let j = 0; j < lan.length; j++) {
+                            for (let i = 0; i < my_data.length; i++) {
+                                if (lan[j].value === my_data[i]) { 
+                                    lan[j].checked = true;
+                               }
+                            }
+                        }                        
+                    </script>   
+        </div>
+
+
+
+        <input type = "submit" name="submit" value="Update"> 
+    </form> 
+
+{% endblock %}
+

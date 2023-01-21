@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header{ 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    padding: 0 100px;
+    align-items: center;
+    margin: 40px 0;
+}
+header .logo{
+    flex-basis: auto;
+    width: 100px; 
+}
+nav{
+    flex-basis: 80%; 
+}
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+}
+nav ul li{
+    padding: 15px;
+}
+nav ul li a{
+    color: crimson;
+}
+
+/* Container */
+.container{  
+    width: 70%;
+    margin: 0 auto;
+    box-shadow: 0 0 3px crimson;
+    padding: 40px;
+}
+/* Form */
+.form-group{
+    margin-bottom: 10px;
+}
+.form-group .input{
+    width:100%;
+    padding: 10px;
+}
+input[type="submit"]{
+    padding: 10px 20px;
+    background-color: crimson;
+    box-shadow:  0 0 3px crimson;
+    border: none;
+    color: white;
+    font-size: 18px;
+    text-transform:uppercase;
+}
+
+/* Table */
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 10px;
+}
+
+/* Pagination */
+.pagination{
+    display: flex;
+    margin-top: 10px;
+}
+
+.pagination li{
+    background-color: rgb(233, 123, 145);
+    padding: 3px 5px;
+    border-radius: 3px;
+    margin-right: 5px;
+    color: white;
+}
+.pagination li:hover{
+    background-color: crimson;
+}
+.pagination li a{
+    color: white;
+}
+.pagination li.active{
+    background-color: crimson;
+}
+.pagination li.disabled{
+    color: rgb(168, 163, 163);
+    background-color: transparent !important;
+}
+.arrow{
+    background-color: transparent !important;
+}
+.arrow a{
+    color: crimson !important;
+}
+
+/* footer */
+footer{ 
+    margin-top: 40px;
+    background-color: crimson;
+    padding: 20px;
+    color: white;
+}
+.alert{
+    background-color: rgb(28, 170, 104);
+    color: white;
+    padding: 10px;
+    font-weight: 200;
+}

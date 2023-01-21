@@ -1,0 +1,32 @@
+
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Create Acount</h1>
+    <div>
+        {% for message in messages %}
+        <p class="alert">{{ message }}</p>
+        {% endfor %}
+    </div>
+    <form method="post" action="" class="form"> 
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Full Student names</label><br>
+            {{ form.studentname }} 
+        </div>
+    
+        <div class="form-group">
+            <label>Registration Number</label><br>
+            {{ form.regno }} 
+        </div>
+       
+
+        <input type = "submit" name="submit" value="Submit"> 
+    </form>  
+        <p>{{ allLangs }}</p> 
+{% endblock %}
+
+
+

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Add Student</h1>
+    <div>
+        {% for message in messages %}
+        <p class="alert">{{ message }}</p>
+        {% endfor %}
+    </div>
+    <form method="post" action="" class="form"> 
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Full names</label><br>
+            {{ form.name }} 
+        </div>
+        <div class="form-group">
+            <label>National Id</label><br>
+            {{ form.nationalId }} 
+        </div>
+        <div class="form-group">
+            <label>Registration Number</label><br>
+            {{ form.regno }} 
+        </div>
+        <div class="form-group">
+            <label>Course</label><br>
+            {{ form.course }} 
+        </div>
+        <div class="form-group">
+            <label>Gender</label><br>
+            {{ form.gender }} 
+        </div>
+        <div class="form-group">
+            <label>Mode of Study</label><br>
+            {{ form.mode }} 
+        </div>
+        <div class="form-group">
+            <label>Interested Languages</label><br>
+            {{ form.languages }} 
+        </div>
+
+        <input type = "submit" name="submit" value="Submit"> 
+    </form>  
+        <p>{{ allLangs }}</p> 
+{% endblock %}
+
